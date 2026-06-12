@@ -4,395 +4,197 @@
 <img width="1394" height="837" alt="image" src="https://github.com/user-attachments/assets/53bbd11d-4bc9-4973-99c8-90009fbf083e" />
 
 
-### Premium Pet Care Platform for Modern Pet Owners & Professional Sitters
+## Overview
 
-SaviPets is a next-generation pet care ecosystem built to connect pet owners with trusted pet sitters through intelligent scheduling, real-time visit tracking, secure payments, and enterprise-grade operational tools.
+SaviPets is a native iOS pet care platform that connects pet owners, pet sitters, and administrators through a unified booking, communication, tracking, and payment system.
 
-Designed with a premium user experience, scalable cloud architecture, and AI-enhanced automation, SaviPets delivers the reliability of industry leaders while providing a more personalized and transparent experience for pet families.
+The application is built with SwiftUI and Firebase using a modular MVVM architecture and protocol-based dependency injection.
 
-Platform
-Swift
-SwiftUI
-Firebase
-Architecture
-Status
+Primary objectives:
 
----
-
-# 🌟 Vision
-
-Pet care should be simple, transparent, and trustworthy.
-
-SaviPets was created to modernize the pet care experience through technology that provides:
-
-- Complete booking management
-- Real-time sitter accountability
-- Secure digital payments
-- Intelligent scheduling assistance
-- Instant communication
-- Enterprise-grade reliability
-
-Whether managing a single walk or an entire recurring care schedule, SaviPets gives owners peace of mind and provides sitters with professional tools to operate efficiently.
+- Manage pet care bookings
+- Enable real-time communication
+- Track sitter visits
+- Process payments securely
+- Provide administrative oversight
+- Maintain a scalable foundation for future growth
 
 ---
 
-# 🚀 Core Capabilities
+## Current Status
 
-## 📅 Intelligent Booking Platform
+Version: 1.0
 
-### Flexible Scheduling
+Development Phase: Production
+
+Supported Platforms:
+
+- iOS 17+
+- iPhone
+- iPad
+
+Core systems are operational, including:
+
+- Authentication
+- Booking management
+- Pet management
+- Messaging
+- GPS visit tracking
+- Payment processing
+- Push notifications
+- Administrative tools
+
+---
+
+## Core Features
+
+### Booking System
 
 - One-time bookings
 - Recurring bookings
-- Custom schedules
-- Multi-pet support
-- Long-term care plans
+- Multiple service types
+- Booking modifications
+- Schedule management
 
-### Smart Availability Engine
+### Pet Management
 
-SaviPets continuously synchronizes sitter availability and booking demand to reduce scheduling conflicts and improve service coverage.
+- Pet profiles
+- Vaccination information
+- Care instructions
+- Emergency contacts
+- Photo uploads
 
-### AI-Assisted Scheduling
+### Messaging
 
-Advanced scheduling intelligence helps identify:
-
-- Double-bookings
-- Travel inefficiencies
-- Calendar conflicts
-- Optimal sitter assignments
-- Schedule optimization opportunities
-
----
-
-## 📍 Real-Time Visit Verification
-
-Transparency is critical in pet care.
-
-### GPS Visit Tracking
-
-- Automatic arrival detection
-- Location verification
-- Visit route monitoring
-- Live map integration
-
-### Visit Timer System
-
-Every visit includes:
-
-- Check-in timestamp
-- Active timer tracking
-- Check-out verification
-- Duration reporting
-
-### Owner Visibility
-
-Pet owners can monitor visit progress in real time, creating a higher level of trust and accountability.
-
----
-
-## 💬 Unified Communication Hub
-
-### Real-Time Messaging
-
-Built-in messaging enables seamless communication between:
-
-- Pet Owners
-- Pet Sitters
-- Administrators
-
-### Rich Media Support
-
-- Photo sharing
+- Real-time chat
+- Owner ↔ Sitter communication
 - Visit updates
-- Pet status reports
-- Activity documentation
+- Photo sharing
+- Push notifications
 
-### Reliable Delivery
+### Visit Tracking
 
-The messaging infrastructure includes:
+- GPS verification
+- Check-in / Check-out
+- Visit timers
+- Route tracking
+- Activity reporting
 
-- Offline caching
-- Delivery confirmation
-- Retry mechanisms
-- Push notification support
+### Payments
 
----
-
-## 💳 Secure Payment Infrastructure
-
-### Square Payments Integration
-
-SaviPets leverages Square's secure payment ecosystem for:
-
-- Service purchases
-- Automated invoicing
-- Transaction tracking
+- Square integration
+- Invoice generation
 - Payment history
+- Booking-based pricing
 
-### Dynamic Pricing Engine
+### Administration
 
-Pricing is automatically calculated based on:
-
-- Service type
-- Duration
-- Number of pets
-- Booking frequency
-- Premium service options
+- User management
+- Booking oversight
+- Platform monitoring
+- Reporting tools
 
 ---
 
-## 🤖 Operational Intelligence
+## Architecture
 
-The platform includes intelligent automation features designed to reduce administrative overhead and improve customer satisfaction.
+### Pattern
 
-Examples include:
+MVVM
 
-- Booking conflict detection
-- Automated reminders
-- Visit verification workflows
-- Smart notifications
-- Scheduling recommendations
+### State Management
 
----
+- AppState
+- Observable Objects
+- Async/Await
+- Combine
 
-# 🎨 Premium Design System
+### Dependency Management
 
-## SPDesignSystem
+Protocol-based dependency injection through DependencyContainer.
 
-SaviPets utilizes a fully custom design system built specifically for scalability and consistency.
+### Backend
 
-### Features
-
-- Scheme-aware color system
-- Accessibility-first typography
-- Dynamic theming
-- Glassmorphism components
-- Adaptive layouts
-- Smooth animations
-- Consistent design tokens
-
-### Theme Experience
-
-#### Light Mode
-
-Elegant, high-contrast visuals optimized for readability.
-
-#### Dark Mode
-
-Premium golden-accent gradients and immersive depth effects engineered for modern OLED displays.
-
----
-
-# 🏗 Enterprise Architecture
-
-SaviPets follows modern software engineering principles focused on maintainability, scalability, and testability.
-
-mermaid graph TD  UI[SwiftUI Views] UI --> VM[ViewModels]  VM --> Services[Service Layer] Services --> Protocols[Service Contracts] Protocols --> Firebase[Firebase Services]  AppState[App State] AppState --> UI 
-
-## Architectural Principles
-
-### MVVM-C
-
-- Clear separation of concerns
-- Predictable state management
-- Improved testability
-- Simplified maintenance
-
-### Dependency Injection
-
-A centralized dependency container manages:
-
-- Service registration
-- Lifecycle management
-- Environment configuration
-- Test mocking
-
-### Service-Oriented Design
-
-30+ specialized services handle:
+Firebase provides:
 
 - Authentication
-- Booking Management
-- GPS Tracking
-- Messaging
-- Payments
-- Notifications
-- Analytics
+- Firestore
+- Storage
+- Cloud Functions
+- Push Notifications
 
 ---
 
-# 🛠 Technology Stack
+## Technology Stack
 
 | Layer | Technology |
 |---------|------------|
-| Frontend | SwiftUI |
 | Language | Swift 5.9+ |
-| Concurrency | Async/Await, Combine |
+| UI | SwiftUI |
+| Architecture | MVVM |
 | Backend | Firebase |
 | Database | Firestore |
-| Authentication | Firebase Auth |
 | Storage | Firebase Storage |
-| Functions | Firebase Cloud Functions |
-| Payments | Square SDK |
-| Mapping | MapKit |
+| Authentication | Firebase Auth |
+| Payments | Square |
 | Location | CoreLocation |
-| Notifications | Firebase Cloud Messaging |
-| Architecture | MVVM-C |
-| Dependency Injection | Protocol-Based DI |
+| Maps | MapKit |
+| Notifications | Firebase Messaging |
 
 ---
 
-# 🔐 Security & Reliability
+## Project Structure
 
-SaviPets is engineered with security and data protection as foundational principles.
-
-### Security Features
-
-- Secure Firebase Authentication
-- Role-based access control
-- Firestore security rules
-- Secure payment processing
-- Protected cloud functions
-- Principle of least privilege
-- Environment-based configuration
-
-### Reliability Features
-
-- Offline data persistence
-- Real-time synchronization
-- Automatic retry mechanisms
-- State recovery workflows
-- Robust error handling
+text SaviPets ├── Auth/ ├── Booking/ ├── Dashboard/ ├── Features/ ├── Services/ ├── Models/ ├── Design/ ├── Utilities/ ├── Resources/ └── Tests/ 
 
 ---
 
-# 📱 User Roles
-
-## Pet Owners
-
-- Manage pets
-- Book services
-- Track visits
-- Communicate with sitters
-- View payment history
-
-## Pet Sitters
-
-- Manage availability
-- Accept bookings
-- Navigate visits
-- Submit visit reports
-- Track earnings
-
-## Administrators
-
-- Manage users
-- Review bookings
-- Monitor platform health
-- Handle disputes
-- View operational analytics
-
----
-
-# 📂 Repository Structure
-
-text SaviPets │ ├── Auth/ ├── Booking/ ├── Dashboard/ ├── Features/ │   ├── Chat/ │   ├── GPS/ │   ├── Notifications/ │   └── AI/ │ ├── Services/ ├── Design/ ├── Models/ ├── Utilities/ ├── Resources/ │ └── SaviPetsTests/ 
-
----
-
-# 🔧 Getting Started
-
-## Prerequisites
+## Development Requirements
 
 - macOS Sequoia or later
 - Xcode 16+
-- iOS 17+ Deployment Target
+- Swift 5.9+
 - Firebase Project
 - Square Developer Account
 
-## Installation
+---
 
-### Clone Repository
+## Setup
 
-bash git clone https://github.com/YOUR-USERNAME/SaviPets.git cd SaviPets 
+1. Clone repository
 
-### Firebase Setup
+bash git clone <repository-url> 
 
-1. Create Firebase Project
-2. Enable:
-   - Authentication
-   - Firestore
-   - Storage
-   - Cloud Messaging
-3. Add:
+2. Add:
 
 text GoogleService-Info.plist 
 
-to the application target.
+3. Configure Firebase environment
 
-### Configure Environment
+4. Configure Square credentials
 
-text Firebase Configuration Square Credentials API Environment Settings 
-
-### Run
-
-bash ⌘ + R 
-
-Launch on:
-
-- iOS Simulator
-- Physical Device
-- TestFlight Environment
+5. Build and run
 
 ---
 
-# 📈 Platform Status
+## Development Principles
 
-### Production Version
-
-v1.0 — June 2026
-
-Current Highlights:
-
-- Fully operational booking platform
-- Real-time messaging system
-- GPS visit verification
-- Square payment integration
-- AI-assisted scheduling
-- Premium Glassmorphism UI
-- Enterprise-grade design system
+- Keep views lightweight
+- Business logic belongs in services
+- All external dependencies are abstracted through protocols
+- Prefer composition over inheritance
+- Maintain feature modularity
+- Follow existing design system patterns
+- Preserve backward compatibility when possible
 
 ---
 
-# 🎯 Roadmap
-
-### Upcoming Releases
-
-- AI-powered sitter matching
-- Dynamic route optimization
-- Advanced analytics dashboard
-- Multi-region deployment
-- Subscription memberships
-- Veterinary partner integrations
-- Apple Watch companion app
-- Enhanced pet health tracking
-
----
-
-# 📄 License
+## Repository Classification
 
 Private Repository
 
-All Rights Reserved © 2026 SaviPets LLC
+Confidential and proprietary.
 
-Unauthorized copying, modification, distribution, or commercial use is prohibited.
+All source code, assets, documentation, architecture, and business logic contained within this repository are the intellectual property of SaviPets LLC.
 
----
-
-# ❤️ Built for Pet Families
-
-SaviPets combines premium design, intelligent automation, and enterprise-grade engineering to create a trusted platform for modern pet care.
-
-Delivering confidence to pet owners.
-Empowering professional sitters.
-Building the future of pet care.
+Unauthorized distribution or reproduction is prohibited.
