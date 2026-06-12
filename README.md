@@ -1,200 +1,123 @@
-# 🐾 SaviPets
+🐾 SaviPets Ecosystem
 
 
-<img width="1394" height="837" alt="image" src="https://github.com/user-attachments/assets/53bbd11d-4bc9-4973-99c8-90009fbf083e" />
+  <img width="1394" height="837" alt="image" src="https://github.com/user-attachments/assets/53bbd11d-4bc9-4973-99c8-90009fbf083e" />
 
+  Overview
 
-## Overview
 
-SaviPets is a native iOS pet care platform that connects pet owners, pet sitters, and administrators through a unified booking, communication, tracking, and payment system.
+  SaviPets is a comprehensive, multi-platform pet care marketplace that connects pet owners, professional sitters, and administrators. The ecosystem
+  provides a seamless experience for booking, real-time communication, visit tracking, and secure payments across iOS, Android, and Web.
 
-The application is built with SwiftUI and Firebase using a modular MVVM architecture and protocol-based dependency injection.
 
-Primary objectives:
+  The project is built with a security-first approach, employing a modern tech stack (SwiftUI, Jetpack Compose, TypeScript) and a robust Firebase-backed
+  infrastructure with granular Role-Based Access Control (RBAC V2).
 
-- Manage pet care bookings
-- Enable real-time communication
-- Track sitter visits
-- Process payments securely
-- Provide administrative oversight
-- Maintain a scalable foundation for future growth
 
----
+  Core Ecosystem Components
 
-## Current Status
 
-Version: 1.0
 
-Development Phase: Production
+  ┌──────────────────┬─────────────┬─────────────────────────────────────────┬─────────────┐
+  │ Component        │ Platform    │ Tech Stack                              │ Status      │
+  ├──────────────────┼─────────────┼─────────────────────────────────────────┼─────────────┤
+  │ SaviPets iOS     │ iOS 17+     │ Swift, SwiftUI, MVVM                    │ Production  │
+  │ SaviPets Android │ Android 14+ │ Kotlin, Jetpack Compose, Clean Arch     │ Production  │
+  │ SaviPets Backend │ Cloud       │ Node.js, TypeScript, Firebase Functions │ Production  │
+  │ Admin Dashboard  │ Web         │ React, TypeScript                       │ Operational │
+  │ Landing Page     │ Web         │ Astro                                   │ Live        │
+  └──────────────────┴─────────────┴─────────────────────────────────────────┴─────────────┘
 
-Supported Platforms:
+  ---
 
-- iOS 17+
-- iPhone
-- iPad
+  Core Features
 
-Core systems are operational, including:
 
-- Authentication
-- Booking management
-- Pet management
-- Messaging
-- GPS visit tracking
-- Payment processing
-- Push notifications
-- Administrative tools
+  📅 Smart Booking System
+   - Flexible Scheduling: One-time and recurring bookings with modification support.
+   - Service Management: Support for multiple service types (walking, sitting, grooming).
+   - Matching Engine: AI-powered sitter assignment based on skills, availability, and ratings.
 
----
 
-## Core Features
+  📍 Real-Time Visit Tracking
+   - GPS Verification: Precise check-in/out with location validation and route tracking.
+   - Live Updates: Visit timers, activity reporting, and status monitoring.
+   - Verification: Mandatory photographic proof and detailed visit logs for owner peace of mind.
 
-### Booking System
 
-- One-time bookings
-- Recurring bookings
-- Multiple service types
-- Booking modifications
-- Schedule management
+  💬 Integrated Communication
+   - Real-Time Messaging: Instant chat between Owners and Sitters.
+   - Rich Media: High-quality photo sharing for visit updates and pet reports.
+   - Notifications: Multi-channel alerts via Push (FCM), Email (SendGrid), and SMS (Twilio).
 
-### Pet Management
 
-- Pet profiles
-- Vaccination information
-- Care instructions
-- Emergency contacts
-- Photo uploads
+  💳 Secure Payments
+   - Square Integration: Enterprise-grade payment processing and secure transactions.
+   - Automated Invoicing: Dynamic pricing based on service duration, type, and pet count.
+   - Transparency: Complete payment history, receipt generation, and financial reporting.
 
-### Messaging
 
-- Real-time chat
-- Owner ↔ Sitter communication
-- Visit updates
-- Photo sharing
-- Push notifications
+  🛡️ Security & Administration
+   - RBAC (V2): Granular Role-Based Access Control (Admin, Moderator, Sitter, Owner, System).
+   - Pet Management: Comprehensive profiles including medical history and care instructions.
+   - Audit Ready: Extensive logging, monitoring, and security audit documentation.
 
-### Visit Tracking
+  ---
 
-- GPS verification
-- Check-in / Check-out
-- Visit timers
-- Route tracking
-- Activity reporting
+  Technology Stack
 
-### Payments
 
-- Square integration
-- Invoice generation
-- Payment history
-- Booking-based pricing
+  Mobile (iOS & Android)
+   - iOS: SwiftUI, Combine, Async/Await, Protocol-based Dependency Injection.
+   - Android: Jetpack Compose, Hilt/Dagger, Coroutines, Material 3.
+   - Common Features: Native Maps integration, CoreLocation, Biometric Authentication.
 
-### Administration
 
-- User management
-- Booking oversight
-- Platform monitoring
-- Reporting tools
+  Backend & Infrastructure
+   - Language: TypeScript (Strict Mode) in a monorepo structure.
+   - Runtime: Node.js 20+ (Firebase Cloud Functions).
+   - Database: Firestore (with advanced security rules V2).
+   - Security: Firebase Auth + Custom Claims for RBAC, Zod for schema validation.
 
----
 
-## Architecture
+  Web & Landing
+   - Admin: React-based dashboard for system-wide oversight and user management.
+   - Landing: Astro for high-performance, SEO-optimized public presence.
 
-### Pattern
+  ---
 
-MVVM
+  Repository Structure
 
-### State Management
 
-- AppState
-- Observable Objects
-- Async/Await
-- Combine
+   1 SaviPets-PF/
+   2 ├── savipets-ios/       # Native iOS Application (Swift/SwiftUI)
+   3 ├── savipets-android/   # Native Android Application (Kotlin/Compose)
+   4 ├── savipets-backend/   # Firebase Functions & Business Logic (TypeScript)
+   5 ├── savipets-web-admin/ # Administrative Web Dashboard (React)
+   6 ├── savipets-landing/   # Public Marketing Site (Astro)
+   7 └── docs/               # System Architecture & Audit Documentation
 
-### Dependency Management
+  ---
 
-Protocol-based dependency injection through DependencyContainer.
+  Development Principles
 
-### Backend
 
-Firebase provides:
+   - Modular Architecture: Clean separation of concerns (MVVM/Clean Architecture).
+   - Security First: Mandatory RBAC, field-level encryption, and regular credential auditing.
+   - Type Safety: End-to-end type safety from Backend to Mobile clients.
+   - Native Experience: Prioritizing platform-native UI/UX patterns.
+   - Comprehensive Documentation: Every feature is backed by detailed design and verification docs.
 
-- Authentication
-- Firestore
-- Storage
-- Cloud Functions
-- Push Notifications
+  ---
 
----
+  Repository Classification
 
-## Technology Stack
+  Private & Proprietary
 
-| Layer | Technology |
-|---------|------------|
-| Language | Swift 5.9+ |
-| UI | SwiftUI |
-| Architecture | MVVM |
-| Backend | Firebase |
-| Database | Firestore |
-| Storage | Firebase Storage |
-| Authentication | Firebase Auth |
-| Payments | Square |
-| Location | CoreLocation |
-| Maps | MapKit |
-| Notifications | Firebase Messaging |
 
----
+  All source code, assets, and business logic are the intellectual property of SaviPets LLC. Unauthorized distribution, reproduction, or reverse
+  engineering is strictly prohibited.
 
-## Project Structure
 
-text SaviPets ├── Auth/ ├── Booking/ ├── Dashboard/ ├── Features/ ├── Services/ ├── Models/ ├── Design/ ├── Utilities/ ├── Resources/ └── Tests/ 
-
----
-
-## Development Requirements
-
-- macOS Sequoia or later
-- Xcode 16+
-- Swift 5.9+
-- Firebase Project
-- Square Developer Account
-
----
-
-## Setup
-
-1. Clone repository
-
-bash git clone <repository-url> 
-
-2. Add:
-
-text GoogleService-Info.plist 
-
-3. Configure Firebase environment
-
-4. Configure Square credentials
-
-5. Build and run
-
----
-
-## Development Principles
-
-- Keep views lightweight
-- Business logic belongs in services
-- All external dependencies are abstracted through protocols
-- Prefer composition over inheritance
-- Maintain feature modularity
-- Follow existing design system patterns
-- Preserve backward compatibility when possible
-
----
-
-## Repository Classification
-
-Private Repository
-
-Confidential and proprietary.
-
-All source code, assets, documentation, architecture, and business logic contained within this repository are the intellectual property of SaviPets LLC.
-
-Unauthorized distribution or reproduction is prohibited.
+  Last Updated: June 11, 2026
+  Maintained By: SaviPets Engineering Team
