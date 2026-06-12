@@ -1,5 +1,9 @@
 # 🐾 SaviPets
 
+
+<img width="1394" height="837" alt="image" src="https://github.com/user-attachments/assets/53bbd11d-4bc9-4973-99c8-90009fbf083e" />
+
+
 ### Premium Pet Care Platform for Modern Pet Owners & Professional Sitters
 
 SaviPets is a next-generation pet care ecosystem built to connect pet owners with trusted pet sitters through intelligent scheduling, real-time visit tracking, secure payments, and enterprise-grade operational tools.
